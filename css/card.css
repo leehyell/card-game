@@ -1,0 +1,373 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*전 페이지 공통*/
+.display_flex {
+    display: flex;
+}
+.flex_wrap {
+    flex-wrap: wrap;
+}
+.flex_nowrap {
+    flex-wrap: nowrap;
+}
+.flex_start {
+    justify-content: flex-start;
+}
+.flex_center {
+    justify-content: center;
+}
+.flex_end {
+    justify-content: flex-end;
+}
+.flex_between {
+    justify-content: space-between;
+}
+.flex_around {
+    justify-content: space-around;
+}
+.flex_align_s {
+    align-items: flex-start;
+}
+.flex_align_c {
+    align-items: center;
+}
+.flex_align_e {
+    align-items: flex-end;
+}
+.flex_align_str {
+    align-items: stretch;
+}
+.flex_dir_column {
+    flex-direction: column;
+}
+input,
+textarea {
+    cursor: text;
+    resize: none;
+}
+select,
+select option,
+button,
+button *,
+a img,
+a p,
+a {
+    cursor: pointer;
+}
+button,
+img {
+    display: inline-block;
+}
+button[disabled] {
+    cursor: default;
+    background-color: #999!important;
+}
+*{
+    font-family: 'PyeongChangPeace-Light'!important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 메인 */
+.main_section {
+    width: 100vw;
+    min-height: calc(100vh - 110px);
+}
+
+/*카드 뒤집기*/
+.card_inner {
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card_whole.card_flipped {
+    z-index: 5;
+}
+.card_whole.card_flipped .card_inner {
+    transform: rotateY(180deg);
+}
+.card_front,
+.card_back {
+    position: absolute;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+.card_back {
+    transform: rotateY(180deg);
+}
+
+img.no_right_img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    top: 310px;
+    left: 360px;
+    background-size: contain;
+    display: none;
+}
+
+.game_group_card_whole {
+    width: 100vw;
+    height: calc(100vh - 140px);
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.game_group_card_box {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    margin: 0 auto;
+}
+.game_group_card_row {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.game_group_card_row img {
+    min-width: 74px;
+    width: 74px;
+    max-width: 74px;
+    height: 103px;
+    background-size: contain;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 5px 0 0;
+}
+/* 내 카드 */
+.game_groupgame_top_whole {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    background-color: #F2E9C1;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+.game_group_card_row.game_group_card_row4 {
+    width: calc(100% - 40px);
+    height: 110px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+}
+.card_grab_mine_flex{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    margin: 5px 20px 5px auto;
+}
+.card_grab_mine_flex::-webkit-scrollbar {
+    display: none;
+}
+.game_group_card_row.game_group_card_row4 .game_group_card_row img {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    margin: 0;
+}
+
+.card_grab_mine_flex2 {
+    min-width: 86px;
+    width: 86px;
+    height: 103px;
+    background-color: #DFCE7D;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+p.game_how_txt {
+    width: max-content;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #efefef;
+    text-align: center;
+    background-color: #BFB275;
+    padding: 4px 20px;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+}
+
+/* 가운데 시스템 카드 */
+.game_group_card_center_whole {
+    position: absolute;
+    width: calc(100% - 40px);
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.group_card_left_box {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+}
+.card_inner_whole {
+    width: auto;
+    height: auto;
+    max-height: 120px;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.card_whole {
+    position: relative;
+    width: 100%;
+    max-width: 74px;
+    height: auto;
+    margin: -104.2px auto 0 auto;
+    perspective: 140px;
+}
+.card_inner_whole .card_whole:first-child {
+    margin: 0 auto;
+}
+.game_card {
+    position: relative;
+    width: 100%;
+    height: 103px;
+}
+.game_card img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.group_card_inner_box {
+    width: 100%;
+    max-width: 320px;
+    min-height: max-content;
+    height: auto;
+    margin: 0 auto;
+}
+.group_card_inner_box * {
+    cursor: pointer;
+}
+.group_card_inner_box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-size: contain;
+    overflow: hidden;
+    margin: 0;
+    cursor: pointer;
+}
+.group_card_inner_box img:nth-child(3n) {
+    margin-right: 0;
+}
+.group_card_inner_box img:nth-child(4),
+.group_card_inner_box img:nth-child(5),
+.group_card_inner_box img:nth-child(6) {
+    margin-bottom: 0;
+}
+
+.group_card_inner_box .card_whole {
+    min-width: calc(25% - 6px);
+    width: calc(25% - 6px);
+    margin: 8px 8px 0 0!important;
+}
+.group_card_inner_box .card_whole:nth-child(4n) {
+    margin-right: 0!important;
+}
+
+.win_div {
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 200px);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.win_img {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button.card_pass {
+    position: fixed;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    color: #BFB275;
+    background-color: transparent;
+    border: 1px solid #BFB275;
+    border-radius: 5px;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+button.game_reset {
+    position: fixed;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    color: #BFB275;
+    background-color: transparent;
+    border: 1px solid #BFB275;
+    border-radius: 5px;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+@media (min-width: 430px) and (min-height: 800px) {
+    p.game_how_txt {
+        font-size: 20px;
+        line-height: 27px;
+        padding: 16px 20px;
+    }
+    .group_card_inner_box {
+        min-width: 400px;
+        width: 100%;
+        max-width: 400px;
+        min-height: max-content;
+        height: auto;
+        margin: 0 auto;
+    }
+    .group_card_inner_box .game_card {
+        height: 131px;
+    }
+    .group_card_inner_box .card_whole {
+        max-width: 94px;
+    }
+
+    button.card_pass {
+        width: 120px;
+        font-size: 20px;
+        line-height: 29px;
+    }
+    button.game_reset {
+        width: 120px;
+        font-size: 20px;
+        line-height: 29px;
+    }
+}
